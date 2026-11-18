@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chhaap Studio · Custom Packaging & Brand Kits for D2C Brands</title>
+<meta name="description" content="Custom boxes, tags, stickers and complete brand kits for D2C and Instagram brands. Small runs, free mockup, delivered across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4ecdf; --paper-2:#ebdfcc; --kraft:#b07a4a; --kraft-d:#8a5a33;
+    --ink:#1d1a16; --ink-2:#4a433b; --stamp:#c63f2a; --line:#d8c8b0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;
+    background-image:radial-gradient(rgba(138,90,51,.06) 1px,transparent 1px);background-size:6px 6px}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.1;letter-spacing:-.01em}
+  .deva{font-family:"Tiro Devanagari Hindi",serif}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(244,236,223,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo .mark{width:38px;height:38px;border:2.5px solid var(--stamp);border-radius:50%;display:grid;place-items:center;
+    color:var(--stamp);font-size:18px;transform:rotate(-8deg)}
+  .logo b{font-family:"Fraunces",serif;font-weight:800;font-size:22px}
+  .logo span{font-size:12px;color:var(--ink-2);letter-spacing:.14em;text-transform:uppercase;margin-left:2px}
+  .navlinks{display:flex;gap:26px;align-items:center;font-weight:500;font-size:15px}
+  .navlinks a{text-decoration:none}
+  .navlinks a:not(.btn):hover{color:var(--stamp)}
+  @media (max-width:760px){.navlinks a:not(.btn){display:none}}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;text-decoration:none;
+    border:2px solid var(--ink);transition:transform .15s,box-shadow .15s;cursor:pointer;font-size:15px;font-family:inherit}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--stamp)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn-sm{padding:9px 16px;font-size:14px}
+
+  /* hero */
+  .hero{padding:84px 0 72px;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--kraft-d);margin-bottom:18px}
+  .hero h1{font-size:clamp(42px,6vw,76px);font-weight:800}
+  .hero h1 em{font-style:italic;color:var(--stamp);font-weight:600}
+  .hero p.lead{font-size:19px;color:var(--ink-2);max-width:540px;margin:22px 0 32px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .trust{margin-top:30px;display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--ink-2)}
+  .trust span::before{content:"✓ ";color:var(--stamp);font-weight:700}
+
+  /* box illustration */
+  .box-art{position:relative;aspect-ratio:1/1;max-width:420px;justify-self:center;width:100%}
+  .box-art svg{width:100%;height:auto;filter:drop-shadow(10px 16px 0 rgba(29,26,22,.12))}
+  .stamp{position:absolute;right:-6px;top:6%;width:128px;height:128px;border:3px solid var(--stamp);border-radius:50%;
+    color:var(--stamp);display:grid;place-items:center;text-align:center;transform:rotate(14deg);font-weight:700;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:rgba(244,236,223,.6)}
+  .stamp b{display:block;font-size:30px;letter-spacing:0;font-family:"Tiro Devanagari Hindi",serif;font-weight:400;line-height:1}
+  @media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.box-art{max-width:320px}}
+
+  section{padding:84px 0}
+  .sec-head{max-width:640px;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(32px,4vw,48px);font-weight:800}
+  .sec-head p{color:var(--ink-2);margin-top:12px;font-size:17px}
+
+  /* products */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:#fbf6ee;border:1.5px solid var(--line);border-radius:16px;padding:26px;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--kraft)}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:var(--paper-2);display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+  .card h3{font-size:21px;font-weight:600;margin-bottom:6px}
+  .card p{color:var(--ink-2);font-size:15px}
+
+  /* kit */
+  .kit{background:var(--ink);color:var(--paper);border-radius:28px;padding:64px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+  .kit::after{content:"छाप";position:absolute;right:-20px;bottom:-70px;font-family:"Tiro Devanagari Hindi",serif;font-size:260px;color:rgba(244,236,223,.05);line-height:1}
+  .kit .eyebrow{color:#e0a878}
+  .kit h2{font-size:clamp(32px,4vw,50px);font-weight:800}
+  .kit p{color:#cfc4b4;margin:16px 0 28px;font-size:17px}
+  .kit ul{list-style:none;display:grid;gap:12px;position:relative;z-index:1}
+  .kit li{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;border:1px solid rgba(244,236,223,.15);border-radius:12px;background:rgba(244,236,223,.04)}
+  .kit li b{display:block;font-weight:700}
+  .kit li small{color:#b9ad9c;font-size:14px}
+  .kit li .n{font-family:"Fraunces",serif;color:#e0a878;font-weight:800;font-size:20px;min-width:26px}
+  .kit .btn-primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  @media (max-width:860px){.kit{grid-template-columns:1fr;padding:40px 26px}}
+
+  /* why */
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  @media (max-width:860px){.why{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.why{grid-template-columns:1fr}}
+  .why div{border-top:3px solid var(--ink);padding-top:18px}
+  .why h3{font-size:20px;font-weight:600;margin-bottom:8px}
+  .why p{color:var(--ink-2);font-size:15px}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+  @media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.steps{grid-template-columns:1fr}}
+  .step{position:relative;padding:28px 22px 24px;border:1.5px dashed var(--kraft);border-radius:16px;background:rgba(251,246,238,.7)}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:"Fraunces",serif;font-weight:800;font-size:40px;color:var(--stamp);display:block;line-height:1;margin-bottom:12px}
+  .step h3{font-size:19px;font-weight:600;margin-bottom:6px}
+  .step p{font-size:15px;color:var(--ink-2)}
+
+  /* niches */
+  .chips{display:flex;flex-wrap:wrap;gap:12px}
+  .chip{padding:12px 20px;border-radius:999px;border:1.5px solid var(--ink);font-weight:500;background:#fbf6ee}
+
+  /* contact */
+  .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+  @media (max-width:860px){.contact{grid-template-columns:1fr}}
+  .contact-info p{color:var(--ink-2);font-size:17px;margin:14px 0 26px}
+  .line-item{display:flex;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+  .line-item .ic{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:18px;flex:none}
+  .line-item small{display:block;color:var(--ink-2);font-size:13px}
+  .line-item a{font-weight:700;text-decoration:none;font-size:17px}
+  form{background:#fbf6ee;border:1.5px solid var(--line);border-radius:20px;padding:32px;display:grid;gap:16px}
+  label{font-size:14px;font-weight:700;display:grid;gap:6px}
+  input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--kraft)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:520px){.row2{grid-template-columns:1fr}}
+  .form-note{font-size:13px;color:var(--ink-2)}
+
+  footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px;color:var(--ink-2)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  .wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.2);z-index:20;text-decoration:none}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><div class="mark deva">छा</div><b>Chhaap</b><span>Studio</span></a>
+    <div class="navlinks">
+      <a href="#make">What we make</a>
+      <a href="#kit">Brand Kit</a>
+      <a href="#how">How it works</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Free mockup</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Packaging · Branding · Print</span>
+      <h1>Your brand,<br><em>beautifully</em> boxed.</h1>
+      <p class="lead">Custom boxes, tags, stickers and complete brand kits for D2C and Instagram brands. Small runs to start, designed to match, delivered across India.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Get a free mockup →</a>
+        <a class="btn btn-ghost" href="#make">See what we make</a>
+      </div>
+      <div class="trust">
+        <span>Small minimum orders</span>
+        <span>Free 3D mockup</span>
+        <span>Plastic-free options</span>
+      </div>
+    </div>
+    <div class="box-art" aria-hidden="true">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- lid flap -->
+        <path d="M70 150 L200 95 L330 150 L200 205 Z" fill="#c9915e" stroke="#1d1a16" stroke-width="3" stroke-linejoin="round"/>
+        <!-- left face -->
+        <path d="M70 150 L200 205 L200 345 L70 290 Z" fill="#b07a4a" stroke="#1d1a16" stroke-width="3" stroke-linejoin="round"/>
+        <!-- right face -->
+        <path d="M330 150 L200 205 L200 345 L330 290 Z" fill="#9a6a3f" stroke="#1d1a16" stroke-width="3" stroke-linejoin="round"/>
+        <!-- tape -->
+        <path d="M135 122 L265 177 L265 190 L135 135 Z" fill="#f4ecdf" opacity=".55"/>
+        <!-- printed label on left face -->
+        <g transform="matrix(1 .423 0 1 92 175)">
+          <rect width="86" height="62" rx="6" fill="#f4ecdf" stroke="#1d1a16" stroke-width="2.5"/>
+          <text x="43" y="30" font-family="Tiro Devanagari Hindi, serif" font-size="22" text-anchor="middle" fill="#c63f2a">छाप</text>
+          <text x="43" y="49" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2" text-anchor="middle" fill="#1d1a16">YOUR BRAND</text>
+        </g>
+        <!-- tag -->
+        <g transform="rotate(-18 300 300)">
+          <path d="M270 268 L330 268 L345 290 L330 312 L270 312 Z" fill="#f4ecdf" stroke="#1d1a16" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="330" cy="290" r="4.5" fill="#1d1a16"/>
+          <line x1="280" y1="284" x2="315" y2="284" stroke="#c63f2a" stroke-width="3" stroke-linecap="round"/>
+          <line x1="280" y1="296" x2="305" y2="296" stroke="#1d1a16" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+        </g>
+      </svg>
+      <div class="stamp"><div><b>छाप</b>Made to<br>be noticed</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="make">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What we make</span>
+      <h2>Everything your order ships in.</h2>
+      <p>From the outer mailer to the thank-you card inside, all printed with your brand and designed as one set.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="ic">📦</div><h3>Custom mailer boxes</h3><p>Printed corrugated mailers sized to your product, so they protect better and cost less to ship.</p></div>
+      <div class="card"><div class="ic">🎁</div><h3>Product & rigid boxes</h3><p>Mono cartons, sleeve boxes and premium rigid boxes for candles, skincare, jewellery and gifting.</p></div>
+      <div class="card"><div class="ic">🏷️</div><h3>Tags, labels & stickers</h3><p>Hang tags, product labels, seal stickers and jar labels that match your box.</p></div>
+      <div class="card"><div class="ic">💌</div><h3>Thank-you cards & tissue</h3><p>The small inserts that turn an unboxing into something customers post about.</p></div>
+      <div class="card"><div class="ic">✏️</div><h3>Logo & brand identity</h3><p>Logo, colours and fonts, including hand-illustrated designs, ready for packaging and Instagram.</p></div>
+      <div class="card"><div class="ic">🌱</div><h3>Plastic-free shipping</h3><p>Paper courier bags, honeycomb wrap and paper tape to replace poly bags and bubble wrap.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kit" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kit">
+      <div style="position:relative;z-index:1">
+        <span class="eyebrow">Signature offer</span>
+        <h2>The Brand Starter Kit</h2>
+        <p>Launching or rebranding? We design your whole look and print it together, so every piece matches. One team handles it from first sketch to delivery.</p>
+        <a class="btn btn-primary" href="#contact">Ask for kit pricing →</a>
+      </div>
+      <ul>
+        <li><span class="n">01</span><div><b>Logo & colour palette</b><small>Your brand identity, designed for print and Instagram</small></div></li>
+        <li><span class="n">02</span><div><b>Custom printed box</b><small>Mailer or product box, sized to what you sell</small></div></li>
+        <li><span class="n">03</span><div><b>Tags & stickers</b><small>Hang tags, seal stickers and labels</small></div></li>
+        <li><span class="n">04</span><div><b>Thank-you card & tissue</b><small>The unboxing finish</small></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why Chhaap</span>
+      <h2>Built for brands that are just getting started.</h2>
+    </div>
+    <div class="why">
+      <div><h3>Small runs</h3><p>Start with the quantity you actually need, then scale as your orders grow.</p></div>
+      <div><h3>See it before you pay</h3><p>We send a free 3D mockup of your packaging before anything is printed.</p></div>
+      <div><h3>Lower shipping costs</h3><p>Right-sized boxes cut volumetric weight, so you pay less per order.</p></div>
+      <div><h3>Printers across India</h3><p>We work with trusted presses in Sivakasi, Ahmedabad, Surat and Indore.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>From idea to doorstep in four steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Tell us about your brand</h3><p>Share your product, sizes and the look you want on WhatsApp or the form below.</p></div>
+      <div class="step"><h3>Get a free mockup</h3><p>We design your packaging and send a 3D preview, usually within 24–48 hours.</p></div>
+      <div class="step"><h3>Approve a sample</h3><p>Check the print, colours and fit on a physical sample before the full run.</p></div>
+      <div class="step"><h3>Delivered to you</h3><p>Your packaging is printed and shipped to your door, anywhere in India.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Who we work with</span>
+      <h2>Made for small brands with big taste.</h2>
+    </div>
+    <div class="chips">
+      <span class="chip">🕯️ Candles & home fragrance</span>
+      <span class="chip">🧴 Skincare & soaps</span>
+      <span class="chip">👕 Clothing labels</span>
+      <span class="chip">💍 Jewellery & accessories</span>
+      <span class="chip">🪴 Home decor</span>
+      <span class="chip">🎁 Gifting & hampers</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--paper-2)">
+  <div class="wrap contact">
+    <div class="contact-info">
+      <span class="eyebrow">Free mockup</span>
+      <h2 style="font-size:clamp(32px,4vw,48px);font-weight:800">Let's design your box.</h2>
+      <p>Tell us about your brand and we'll send you a free 3D mockup of your packaging. No commitment.</p>
+      <div class="line-item"><div class="ic">💬</div><div><small>WhatsApp</small><a href="https://wa.me/919871154518" target="_blank" rel="noopener">+91 98711 54518</a></div></div>
+      <div class="line-item"><div class="ic">✉️</div><div><small>Email</small><a href="mailto:jainsakar97@gmail.com">jainsakar97@gmail.com</a></div></div>
+      <div class="line-item"><div class="ic">📍</div><div><small>Serving</small><b>Hyderabad · Delhi NCR · All India</b></div></div>
+    </div>
+    <form id="lead" onsubmit="return false">
+      <div class="row2">
+        <label>Your name<input id="f-name" placeholder="Aditi" autocomplete="name"></label>
+        <label>Brand name<input id="f-brand" placeholder="Wick & Glow"></label>
+      </div>
+      <div class="row2">
+        <label>Instagram / website<input id="f-insta" placeholder="@yourbrand"></label>
+        <label>What do you sell?
+          <select id="f-niche">
+            <option>Candles / home fragrance</option><option>Skincare / soaps</option><option>Clothing</option>
+            <option>Jewellery / accessories</option><option>Home decor</option><option>Gifting / hampers</option><option>Other</option>
+          </select>
+        </label>
+      </div>
+      <div class="row2">
+        <label>What do you need?
+          <select id="f-need">
+            <option>Brand Starter Kit</option><option>Custom boxes</option><option>Tags / labels / stickers</option>
+            <option>Logo & branding</option><option>Plastic-free shipping</option><option>Not sure yet</option>
+          </select>
+        </label>
+        <label>Orders per month
+          <select id="f-vol"><option>Under 50</option><option>50–200</option><option>200–500</option><option>500+</option></select>
+        </label>
+      </div>
+      <label>Anything else? <textarea id="f-msg" rows="3" placeholder="Product size, colours you like, deadline…"></textarea></label>
+      <a id="f-send" class="btn btn-primary" href="https://wa.me/919871154518" target="_blank" rel="noopener" style="justify-content:center">Send on WhatsApp →</a>
+      <span class="form-note">This opens WhatsApp with your details filled in. Prefer email? Write to jainsakar97@gmail.com.</span>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 <b>Chhaap Studio</b> · <span class="deva">छाप</span> · Custom packaging & brand kits</span>
+    <span>Hyderabad · Delhi NCR</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919871154518" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script>
+  (function(){
+    var ids=["f-name","f-brand","f-insta","f-niche","f-need","f-vol","f-msg"];
+    var link=document.getElementById("f-send");
+    function build(){
+      var v=function(id){return (document.getElementById(id).value||"").trim();};
+      var text="Hi Chhaap! I'd like a free packaging mockup.\n\n"+
+        "Name: "+v("f-name")+"\nBrand: "+v("f-brand")+"\nInstagram/website: "+v("f-insta")+
+        "\nWe sell: "+v("f-niche")+"\nNeed: "+v("f-need")+"\nOrders/month: "+v("f-vol")+
+        (v("f-msg")?"\nNotes: "+v("f-msg"):"");
+      link.href="https://wa.me/919871154518?text="+encodeURIComponent(text);
+    }
+    ids.forEach(function(id){var el=document.getElementById(id);el.addEventListener("input",build);el.addEventListener("change",build);});
+    build();
+  })();
+</script>
+</body>
+</html>
